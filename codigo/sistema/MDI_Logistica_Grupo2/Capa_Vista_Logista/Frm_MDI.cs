@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Capa_Vista_Seguridad;
 using Capa_Controlador_Seguridad;
 using System.Drawing.Imaging;
+using Capa_vistaprueba;
 
 
 namespace Capa_Vista_Logista
@@ -167,6 +168,55 @@ namespace Capa_Vista_Logista
             Frm_LOGIN login = new Frm_LOGIN();
             login.ShowDialog();
             this.Close();
+        }
+
+       
+
+        private void examenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_mantenimiento m = new Frm_mantenimiento();
+            m.MdiParent = this;
+            m.StartPosition = FormStartPosition.CenterScreen;
+            m.Show();
+        }
+
+        private void bitacoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Bitacora m = new Frm_Bitacora();
+            m.MdiParent = this;
+            m.StartPosition = FormStartPosition.CenterScreen;
+            m.Show();
+        }
+
+        private void cambiarConstraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int idUsuario = 1;
+
+            Frm_cambiar_contrasena m = new Frm_cambiar_contrasena(idUsuario);
+            m.MdiParent = this;
+            m.Show();
+
+        }
+
+        private void ingresarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Empleados m = new Frm_Empleados();
+            m.MdiParent = this;
+            m.StartPosition = FormStartPosition.CenterScreen;
+            m.Show();
+        }
+
+        private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Usuario m = new Frm_Usuario();
+            m.MdiParent = this;
+            m.StartPosition = FormStartPosition.CenterScreen;
+            m.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
